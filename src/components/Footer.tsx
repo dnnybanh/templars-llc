@@ -3,14 +3,19 @@ import { Facebook, Instagram, Linkedin } from "lucide-react";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  const navItems = [
-    { label: "Home", href: "#hero" },
-    { label: "Services", href: "#services" },
-    { label: "About", href: "#about" },
-    { label: "Portfolio", href: "#portfolio" },
-    { label: "Testimonials", href: "#testimonials" },
-    { label: "Contact", href: "#contact" },
-  ];
+  const footerLinks = {
+    services: [
+      { label: "Drywall Installation", href: "#services" },
+      { label: "Framing", href: "#services" },
+      { label: "Painting", href: "#services" },
+    ],
+    company: [
+      { label: "About Us", href: "#about" },
+      { label: "Portfolio", href: "#portfolio" },
+      { label: "Testimonials", href: "#testimonials" },
+      { label: "Contact", href: "#contact" },
+    ],
+  };
 
   const socialLinks = [
     { icon: Facebook, href: "#", label: "Facebook" },
@@ -68,51 +73,37 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Navigation Links */}
+          {/* Services Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Navigation</h4>
+            <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
-              {navItems.map((item, index) => (
+              {footerLinks.services.map((link, index) => (
                 <li key={index}>
                   <button
-                    onClick={() => scrollToSection(item.href)}
+                    onClick={() => scrollToSection(link.href)}
                     className="text-primary-foreground/80 hover:text-accent transition-colors duration-200"
                   >
-                    {item.label}
+                    {link.label}
                   </button>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Quick Links */}
+          {/* Company Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-4">Company</h4>
             <ul className="space-y-2">
-              <li>
-                <button
-                  onClick={() => scrollToSection("#services")}
-                  className="text-primary-foreground/80 hover:text-accent transition-colors duration-200"
-                >
-                  Drywall Installation
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("#services")}
-                  className="text-primary-foreground/80 hover:text-accent transition-colors duration-200"
-                >
-                  Framing
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("#services")}
-                  className="text-primary-foreground/80 hover:text-accent transition-colors duration-200"
-                >
-                  Painting
-                </button>
-              </li>
+              {footerLinks.company.map((link, index) => (
+                <li key={index}>
+                  <button
+                    onClick={() => scrollToSection(link.href)}
+                    className="text-primary-foreground/80 hover:text-accent transition-colors duration-200"
+                  >
+                    {link.label}
+                  </button>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
