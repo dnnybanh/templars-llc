@@ -24,6 +24,16 @@ const Navigation = () => {
   ];
 
   const scrollToSection = (href: string) => {
+    // Special case for Home/Hero - scroll to top
+    if (href === "#hero") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+      setIsMobileMenuOpen(false);
+      return;
+    }
+
     const element = document.querySelector(href);
     if (element) {
       const offsetTop = element.getBoundingClientRect().top + window.pageYOffset;
