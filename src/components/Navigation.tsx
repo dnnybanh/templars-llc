@@ -57,7 +57,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <h1 className="text-xl md:text-2xl font-bold text-primary">
-              Elite Construction
+              Templars
             </h1>
           </div>
 
