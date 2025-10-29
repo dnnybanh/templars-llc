@@ -1,10 +1,15 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useAdaptiveNavigation } from "@/hooks/use-adaptive-navigation";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { shouldUseHamburger, logoRef, navRef } = useAdaptiveNavigation({
+    minSpace: 200, // Minimum space between logo and nav items
+    debounceDelay: 100
+  });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,14 +60,14 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <div className="flex-shrink-0">
+          <div ref={logoRef} className="flex-shrink-0">
             <h1 className="text-xl md:text-2xl font-bold text-primary">
               Templars
             </h1>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div ref={navRef} className={`${shouldUseHamburger ? 'hidden' : 'flex'} items-center space-x-8`}>
             {navItems.map((item) => (
               <button
                 key={item.label}
@@ -78,7 +83,7 @@ const Navigation = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className={shouldUseHamburger ? 'block' : 'hidden'}>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="text-foreground hover:text-primary p-2"
@@ -90,8 +95,8 @@ const Navigation = () => {
       </div>
 
       {/* Mobile Navigation */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden bg-background border-t border-border">
+      {isMobileMenuOpen && shouldUseHamburger && (
+        <div className="bg-background border-t border-border">
           <div className="px-4 pt-2 pb-4 space-y-2">
             {navItems.map((item) => (
               <button
