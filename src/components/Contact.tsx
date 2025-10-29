@@ -48,8 +48,8 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "info@eliteconstruction.com",
-      href: "mailto:info@eliteconstruction.com",
+      value: "info@templars.com",
+      href: "mailto:info@templars.com",
     },
     {
       icon: MapPin,
