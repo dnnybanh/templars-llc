@@ -3,19 +3,14 @@ import { Facebook, Instagram, Linkedin } from "lucide-react";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  const footerLinks = {
-    services: [
-      { label: "Drywall Installation", href: "#services" },
-      { label: "Framing", href: "#services" },
-      { label: "Painting", href: "#services" },
-    ],
-    company: [
-      { label: "About Us", href: "#about" },
-      { label: "Portfolio", href: "#portfolio" },
-      { label: "Testimonials", href: "#testimonials" },
-      { label: "Contact", href: "#contact" },
-    ],
-  };
+  const navItems = [
+    { label: "Home", href: "#hero" },
+    { label: "Services", href: "#services" },
+    { label: "About", href: "#about" },
+    { label: "Portfolio", href: "#portfolio" },
+    { label: "Testimonials", href: "#testimonials" },
+    { label: "Contact", href: "#contact" },
+  ];
 
   const socialLinks = [
     { icon: Facebook, href: "#", label: "Facebook" },
@@ -24,9 +19,23 @@ const Footer = () => {
   ];
 
   const scrollToSection = (href: string) => {
+    // Special case for Home/Hero - scroll to top
+    if (href === "#hero") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+      return;
+    }
+
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      const offsetTop = element.getBoundingClientRect().top + window.pageYOffset;
+      const navHeight = window.innerWidth >= 768 ? 80 : 64; // md:h-20 : h-16
+      window.scrollTo({
+        top: offsetTop - navHeight,
+        behavior: "smooth"
+      });
     }
   };
 
@@ -59,37 +68,51 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Services Links */}
+          {/* Navigation Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
+            <h4 className="text-lg font-semibold mb-4">Navigation</h4>
             <ul className="space-y-2">
-              {footerLinks.services.map((link, index) => (
+              {navItems.map((item, index) => (
                 <li key={index}>
                   <button
-                    onClick={() => scrollToSection(link.href)}
+                    onClick={() => scrollToSection(item.href)}
                     className="text-primary-foreground/80 hover:text-accent transition-colors duration-200"
                   >
-                    {link.label}
+                    {item.label}
                   </button>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Company Links */}
+          {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Company</h4>
+            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              {footerLinks.company.map((link, index) => (
-                <li key={index}>
-                  <button
-                    onClick={() => scrollToSection(link.href)}
-                    className="text-primary-foreground/80 hover:text-accent transition-colors duration-200"
-                  >
-                    {link.label}
-                  </button>
-                </li>
-              ))}
+              <li>
+                <button
+                  onClick={() => scrollToSection("#services")}
+                  className="text-primary-foreground/80 hover:text-accent transition-colors duration-200"
+                >
+                  Drywall Installation
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => scrollToSection("#services")}
+                  className="text-primary-foreground/80 hover:text-accent transition-colors duration-200"
+                >
+                  Framing
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => scrollToSection("#services")}
+                  className="text-primary-foreground/80 hover:text-accent transition-colors duration-200"
+                >
+                  Painting
+                </button>
+              </li>
             </ul>
           </div>
         </div>
