@@ -8,7 +8,7 @@ const Testimonials = () => {
       project: "Residential Renovation",
       rating: 5,
       quote:
-        "Elite Construction transformed our home beautifully. The drywall work was flawless, and the team was professional from start to finish. Highly recommend!",
+        "Templars transformed our home beautifully. The drywall work was flawless, and the team was professional from start to finish. Highly recommend!",
     },
     {
       id: 2,

@@ -13,7 +13,7 @@ const About = () => {
           {/* Text Content */}
           <div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              Why Choose Elite Construction?
+              Why Choose Templars?
             </h2>
             <div className="space-y-4 text-lg leading-relaxed opacity-90">
               <p>

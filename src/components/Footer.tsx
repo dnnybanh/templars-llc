@@ -37,7 +37,7 @@ const Footer = () => {
         <div className="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">Elite Construction</h3>
+            <h3 className="text-2xl font-bold mb-4">Templars</h3>
             <p className="text-primary-foreground/80 leading-relaxed mb-6 max-w-md">
               Professional construction services specializing in drywall installation, framing, and
               painting. Quality craftsmanship backed by 15+ years of experience.
@@ -98,7 +98,7 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/10 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-primary-foreground/70 text-sm text-center md:text-left">
-              © {currentYear} Elite Construction. All rights reserved.
+              © {currentYear} Templars. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
               <button className="text-primary-foreground/70 hover:text-accent transition-colors">
