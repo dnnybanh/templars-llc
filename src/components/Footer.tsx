@@ -24,9 +24,23 @@ const Footer = () => {
   ];
 
   const scrollToSection = (href: string) => {
+    // Special case for Home/Hero - scroll to top
+    if (href === "#hero") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+      return;
+    }
+
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      const offsetTop = element.getBoundingClientRect().top + window.pageYOffset;
+      const navHeight = window.innerWidth >= 768 ? 80 : 64; // md:h-20 : h-16
+      window.scrollTo({
+        top: offsetTop - navHeight,
+        behavior: "smooth"
+      });
     }
   };
 
