@@ -2,71 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
-@layer base {
-  :root {
-    /* Base colors */
-    --background: 0 0% 100%;
-    --foreground: 222 47% 11%;
-
-    /* Card colors */
-    --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
-
-    /* Popover colors */
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
-
-    /* Primary - Navy Blue */
-    --primary: 219 61% 32%;
-    --primary-foreground: 0 0% 100%;
-    --primary-dark: 219 61% 24%;
-    
-    /* Secondary - Light Gray */
-    --secondary: 220 14% 96%;
-    --secondary-foreground: 222 47% 11%;
-
-    /* Accent - Construction Amber */
-    --accent: 38 92% 56%;
-    --accent-foreground: 0 0% 100%;
-    --accent-dark: 32 95% 48%;
-
-    /* Muted colors */
-    --muted: 220 14% 96%;
-    --muted-foreground: 220 9% 46%;
-
-    /* Destructive colors */
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
-
-    /* Border and input */
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 219 61% 32%;
-
-    /* Radius */
-    --radius: 0.5rem;
-
-    /* Custom gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(219 61% 32%) 0%, hsl(219 61% 24%) 100%);
-    --gradient-overlay: linear-gradient(to bottom, rgba(30, 58, 138, 0.7), rgba(30, 58, 138, 0.85));
-    --gradient-subtle: linear-gradient(180deg, hsl(220 14% 96%) 0%, hsl(0 0% 100%) 100%);
-
-    /* Shadows */
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-    --shadow-lg: 0 10px 25px -3px rgb(0 0 0 / 0.1);
-    --shadow-card: 0 10px 25px rgba(0, 0, 0, 0.15);
-    --shadow-nav: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-    /* Transitions */
-    --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-}
+/* Import theme configuration */
+@import './styles/theme.css';
 
 @layer base {
   * {

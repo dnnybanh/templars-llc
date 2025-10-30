@@ -1,0 +1,137 @@
+/**
+ * THEME CONFIGURATION
+ * ==================
+ * This file contains all theme-related design tokens for the application.
+ * Edit values here to change the entire look and feel of the site.
+ * 
+ * All colors MUST be in HSL format: Hue Saturation% Lightness%
+ * Example: 219 61% 32% (don't include "hsl()" wrapper here)
+ */
+
+:root {
+  /* ===================================
+     COLOR PALETTE
+     =================================== */
+  
+  /* Base Colors - Background and text */
+  --background: 0 0% 100%;              /* White background */
+  --foreground: 222 47% 11%;            /* Dark text */
+
+  /* Card Colors */
+  --card: 0 0% 100%;                    /* White card background */
+  --card-foreground: 222 47% 11%;       /* Dark text on cards */
+
+  /* Popover Colors */
+  --popover: 0 0% 100%;                 /* White popover background */
+  --popover-foreground: 222 47% 11%;    /* Dark text in popovers */
+
+  /* Primary Brand Color - Navy Blue */
+  --primary: 219 61% 32%;               /* Main brand color - Navy Blue (#2D5A9F) */
+  --primary-foreground: 0 0% 100%;      /* White text on primary */
+  --primary-dark: 219 61% 24%;          /* Darker navy for gradients/hover */
+  
+  /* Secondary Color - Light Gray */
+  --secondary: 220 14% 96%;             /* Light gray background (#F3F4F6) */
+  --secondary-foreground: 222 47% 11%;  /* Dark text on secondary */
+
+  /* Accent Color - Construction Amber */
+  --accent: 38 92% 56%;                 /* Vibrant amber (#F59E0B) */
+  --accent-foreground: 0 0% 100%;       /* White text on accent */
+  --accent-dark: 32 95% 48%;            /* Darker amber for hover states */
+
+  /* Muted Colors - For subtle elements */
+  --muted: 220 14% 96%;                 /* Light gray for muted backgrounds */
+  --muted-foreground: 220 9% 46%;       /* Medium gray for muted text */
+
+  /* Destructive Colors - For errors and warnings */
+  --destructive: 0 84% 60%;             /* Red for errors */
+  --destructive-foreground: 0 0% 100%;  /* White text on destructive */
+
+  /* Border and Input Colors */
+  --border: 220 13% 91%;                /* Light gray borders */
+  --input: 220 13% 91%;                 /* Light gray input borders */
+  --ring: 219 61% 32%;                  /* Navy focus ring (matches primary) */
+
+  /* ===================================
+     GRADIENTS
+     =================================== */
+  
+  --gradient-primary: linear-gradient(135deg, hsl(219 61% 32%) 0%, hsl(219 61% 24%) 100%);
+  /* Navy gradient - used for hero overlays and premium elements */
+  
+  --gradient-overlay: linear-gradient(to bottom, rgba(30, 58, 138, 0.7), rgba(30, 58, 138, 0.85));
+  /* Dark overlay for hero image - adjust opacity values to change darkness */
+  
+  --gradient-subtle: linear-gradient(180deg, hsl(220 14% 96%) 0%, hsl(0 0% 100%) 100%);
+  /* Subtle background gradient - light gray to white */
+
+  /* ===================================
+     SHADOWS
+     =================================== */
+  
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  /* Small shadow - for subtle elevation */
+  
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  /* Medium shadow - for cards and buttons */
+  
+  --shadow-lg: 0 10px 25px -3px rgb(0 0 0 / 0.1);
+  /* Large shadow - for modals and prominent elements */
+  
+  --shadow-card: 0 10px 25px rgba(0, 0, 0, 0.15);
+  /* Card shadow - used on service cards and portfolio items */
+  
+  --shadow-nav: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Navigation shadow - for sticky header */
+
+  /* ===================================
+     TRANSITIONS
+     =================================== */
+  
+  --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Standard transition - smooth easing for most interactions */
+  
+  --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Fast transition - for quick feedback on clicks/hovers */
+
+  /* ===================================
+     SPACING & SIZING
+     =================================== */
+  
+  --radius: 0.5rem;
+  /* Base border radius - 8px for cards and buttons */
+}
+
+/* ===================================
+   DARK MODE (Optional)
+   =================================== 
+   Uncomment and customize these values to enable dark mode
+*/
+
+/*
+.dark {
+  --background: 222 47% 11%;
+  --foreground: 0 0% 100%;
+  
+  --card: 222 47% 15%;
+  --card-foreground: 0 0% 100%;
+  
+  --popover: 222 47% 15%;
+  --popover-foreground: 0 0% 100%;
+  
+  --primary: 219 61% 42%;
+  --primary-foreground: 0 0% 100%;
+  
+  --secondary: 220 14% 20%;
+  --secondary-foreground: 0 0% 100%;
+  
+  --accent: 38 92% 56%;
+  --accent-foreground: 0 0% 100%;
+  
+  --muted: 220 14% 20%;
+  --muted-foreground: 220 9% 60%;
+  
+  --border: 220 13% 25%;
+  --input: 220 13% 25%;
+}
+*/
