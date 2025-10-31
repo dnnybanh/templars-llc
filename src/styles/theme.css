@@ -14,55 +14,55 @@
      =================================== */
   
   /* Base Colors - Background and text */
-  --background: 0 0% 100%;              /* White background */
-  --foreground: 222 47% 11%;            /* Dark text */
+  --background: 0 0% 100%;              /* White background (#FFFFFF) */
+  --foreground: 0 0% 0%;                /* Black text (#000000) */
 
   /* Card Colors */
-  --card: 0 0% 100%;                    /* White card background */
-  --card-foreground: 222 47% 11%;       /* Dark text on cards */
+  --card: 0 0% 100%;                    /* White card background (#FFFFFF) */
+  --card-foreground: 0 0% 0%;           /* Black text on cards */
 
   /* Popover Colors */
-  --popover: 0 0% 100%;                 /* White popover background */
-  --popover-foreground: 222 47% 11%;    /* Dark text in popovers */
+  --popover: 0 0% 100%;                 /* White popover background (#FFFFFF) */
+  --popover-foreground: 0 0% 0%;        /* Black text in popovers */
 
-  /* Primary Brand Color - Navy Blue */
-  --primary: 219 61% 32%;               /* Main brand color - Navy Blue (#2D5A9F) */
+  /* Primary Brand Color - Brand Red */
+  --primary: 357 95% 46%;               /* Main brand color - Brand Red (#E30613) */
   --primary-foreground: 0 0% 100%;      /* White text on primary */
-  --primary-dark: 219 61% 24%;          /* Darker navy for gradients/hover */
+  --primary-dark: 0 100% 31%;           /* Dark Red for hover states (#A00000) */
   
   /* Secondary Color - Light Gray */
-  --secondary: 220 14% 96%;             /* Light gray background (#F3F4F6) */
-  --secondary-foreground: 222 47% 11%;  /* Dark text on secondary */
+  --secondary: 0 0% 96%;                /* Light gray background (#F5F5F5) */
+  --secondary-foreground: 0 0% 0%;      /* Black text on secondary */
 
-  /* Accent Color - Construction Amber */
-  --accent: 38 92% 56%;                 /* Vibrant amber (#F59E0B) */
+  /* Accent Color - Charcoal (for subtle contrast) */
+  --accent: 0 0% 17%;                   /* Charcoal (#2C2C2C) */
   --accent-foreground: 0 0% 100%;       /* White text on accent */
-  --accent-dark: 32 95% 48%;            /* Darker amber for hover states */
+  --accent-dark: 0 0% 12%;              /* Darker charcoal for hover states */
 
   /* Muted Colors - For subtle elements */
-  --muted: 220 14% 96%;                 /* Light gray for muted backgrounds */
-  --muted-foreground: 220 9% 46%;       /* Medium gray for muted text */
+  --muted: 0 0% 96%;                    /* Light gray for muted backgrounds (#F5F5F5) */
+  --muted-foreground: 0 0% 46%;         /* Medium gray for muted text (#757575) */
 
   /* Destructive Colors - For errors and warnings */
   --destructive: 0 84% 60%;             /* Red for errors */
   --destructive-foreground: 0 0% 100%;  /* White text on destructive */
 
   /* Border and Input Colors */
-  --border: 220 13% 91%;                /* Light gray borders */
-  --input: 220 13% 91%;                 /* Light gray input borders */
-  --ring: 219 61% 32%;                  /* Navy focus ring (matches primary) */
+  --border: 0 0% 91%;                   /* Light gray borders */
+  --input: 0 0% 91%;                    /* Light gray input borders */
+  --ring: 357 95% 46%;                  /* Brand Red focus ring (matches primary) */
 
   /* ===================================
      GRADIENTS
      =================================== */
   
-  --gradient-primary: linear-gradient(135deg, hsl(219 61% 32%) 0%, hsl(219 61% 24%) 100%);
-  /* Navy gradient - used for hero overlays and premium elements */
+  --gradient-primary: linear-gradient(135deg, hsl(357 95% 46%) 0%, hsl(0 100% 31%) 100%);
+  /* Brand Red gradient - used for hero overlays and premium elements */
   
-  --gradient-overlay: linear-gradient(to bottom, rgba(30, 58, 138, 0.7), rgba(30, 58, 138, 0.85));
-  /* Dark overlay for hero image - adjust opacity values to change darkness */
+  --gradient-overlay: linear-gradient(to bottom, rgba(227, 6, 19, 0.7), rgba(227, 6, 19, 0.85));
+  /* Brand Red overlay for hero image - adjust opacity values to change darkness */
   
-  --gradient-subtle: linear-gradient(180deg, hsl(220 14% 96%) 0%, hsl(0 0% 100%) 100%);
+  --gradient-subtle: linear-gradient(180deg, hsl(0 0% 96%) 0%, hsl(0 0% 100%) 100%);
   /* Subtle background gradient - light gray to white */
 
   /* ===================================
@@ -110,28 +110,28 @@
 
 /*
 .dark {
-  --background: 222 47% 11%;
+  --background: 0 0% 0%;
   --foreground: 0 0% 100%;
   
-  --card: 222 47% 15%;
+  --card: 0 0% 8%;
   --card-foreground: 0 0% 100%;
   
-  --popover: 222 47% 15%;
+  --popover: 0 0% 8%;
   --popover-foreground: 0 0% 100%;
   
-  --primary: 219 61% 42%;
+  --primary: 357 95% 56%;
   --primary-foreground: 0 0% 100%;
   
-  --secondary: 220 14% 20%;
+  --secondary: 0 0% 20%;
   --secondary-foreground: 0 0% 100%;
   
-  --accent: 38 92% 56%;
+  --accent: 0 0% 25%;
   --accent-foreground: 0 0% 100%;
   
-  --muted: 220 14% 20%;
-  --muted-foreground: 220 9% 60%;
+  --muted: 0 0% 20%;
+  --muted-foreground: 0 0% 60%;
   
-  --border: 220 13% 25%;
-  --input: 220 13% 25%;
+  --border: 0 0% 25%;
+  --input: 0 0% 25%;
 }
 */
